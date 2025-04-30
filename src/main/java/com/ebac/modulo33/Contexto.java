@@ -16,6 +16,8 @@ public class Contexto {
         MysqlConnection mysqlConnection = new MysqlConnection();
         Connection connection = mysqlConnection.getConnection(url, user, password);
 
+      //  System.out.println(connection);
+
         // Select
         String sql = "select * from usuarios";
         Statement statement = connection.createStatement();

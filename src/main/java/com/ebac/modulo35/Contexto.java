@@ -1,6 +1,8 @@
 package com.ebac.modulo35;
 
+import com.ebac.modulo35.dto.Direccion;
 import com.ebac.modulo35.dto.Usuario;
+import com.ebac.modulo35.model.DireccionModel;
 import com.ebac.modulo35.model.UsuarioModel;
 
 import javax.persistence.EntityManager;
@@ -44,6 +46,38 @@ public class Contexto {
 
         usuarioModel.obtenerUsuarios()
                 .forEach(System.out::println);
+
+        DireccionModel direccionModel = new DireccionModel(entityManager);
+
+        // Crear dirección
+       /* Direccion direccionNueva = new Direccion();
+        direccionNueva.setIdUsuario(1);
+        direccionNueva.setCalle("Av. Reforma");
+        direccionNueva.setNumero(123);
+        direccionNueva.setEstado("CDMX");
+        direccionModel.guardar(direccionNueva);
+
+
+        Direccion direccion = direccionModel.obtenerPorId(1);
+        System.out.println("Dirección: " + direccion);
+
+
+        direccion.setEstado("Estado de México");
+        direccion.setNumero(999);
+        direccionModel.actualizar(direccion);
+
+
+        Direccion direccionActualizada = direccionModel.obtenerPorId(1);
+        System.out.println("Dirección actualizada: " + direccionActualizada);
+
+
+        direccionModel.eliminar(direccion);
+        direccion = direccionModel.obtenerPorId(1);
+        System.out.println("Dirección después de eliminar: " + direccion);
+
+
+        direccionModel.obtenerDirecciones()
+                .forEach(System.out::println);*/
 
         // Cerrar la conexion
         entityManager.close();
